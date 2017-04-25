@@ -10,8 +10,12 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-    res.send('hello');
+    var host = req.get('host');
+    var protocol = req.secure ? 'https' : 'http';
+    res.render('index', { site: protocol + '://' + host });
 });
+
+app.use('/assets', express.static(__dirname + '/public'));
 
 app.get('/api/imagesearch/:term', function (req, res) {
 
