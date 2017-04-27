@@ -2,6 +2,8 @@
 
 This is an image search API built for [a freeCodeCamp project](https://www.freecodecamp.com/challenges/image-search-abstraction-layer).
 
+[Demo](https://enigmatic-depths-58144.herokuapp.com/)
+
 ### User stories:
 
 1. I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
